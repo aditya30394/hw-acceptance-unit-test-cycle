@@ -14,4 +14,16 @@ RSpec.describe MoviesController, type: :controller do
         expect(response).to redirect_to(movies_path)
     end
     
+    it 'tests index function of the controller when sort is title' do
+        get(:index, :sort => "title", :sort => "release_date")
+        expect(flash[:notice]).to be_nil
+        expect(response).to redirect_to(movies_path(:sort => 'release_date', :ratings => {"G" =>"G", "NC-17" => "NC-17", "PG" => "PG", "PG-13" =>"PG-13", "R" =>"R"}))
+    end
+    
+    it 'tests index function of the controller when sort is release_date' do
+        get(:index, :sort => "release_date", :sort => "title")
+        expect(flash[:notice]).to be_nil
+        expect(response).to redirect_to(movies_path(:sort => 'title', :ratings => {"G" =>"G", "NC-17" => "NC-17", "PG" => "PG", "PG-13" =>"PG-13", "R" =>"R"}))
+    end
+    
 end
