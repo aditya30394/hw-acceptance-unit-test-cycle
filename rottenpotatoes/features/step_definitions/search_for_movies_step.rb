@@ -9,8 +9,8 @@ Then(/^the director of "([^"]*)" should be "([^"]*)"$/) do |movie, director|
   Movie.find_by_title(movie).director == director
 end 
 
-Then /I should see "(.*)" before "(.*)"/ do |element1, element2|
-  expect(page.body.index(element1) < page.body.index(element2))
+Then /I should see "(.*)" before "(.*)"/ do |movie1, movie2|
+  expect(page.body.index(movie1) < page.body.index(movie2))
 end
 
 When /I (un)?check the following ratings: (.*)/ do |uncheck, rating_list|

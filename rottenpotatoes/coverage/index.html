@@ -14,7 +14,7 @@
       <img src="./assets/0.10.2/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" style="display:none;">
-      <div class="timestamp">Generated <abbr class="timeago" title="2018-10-05T00:30:10+00:00">2018-10-05T00:30:10+00:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2018-10-05T00:42:32+00:00">2018-10-05T00:42:32+00:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
@@ -25,7 +25,7 @@
      covered at
      <span class="covered_strength">
        <span class="green">
-         3.31
+         5.05
        </span>
     </span> hits/line)
   </h2>
@@ -67,7 +67,7 @@
         <td>43</td>
         <td>43</td>
         <td>0</td>
-        <td>3.5</td>
+        <td>5.5</td>
       </tr>
       
       <tr>
@@ -97,7 +97,7 @@
         <td>5</td>
         <td>5</td>
         <td>0</td>
-        <td>3.2</td>
+        <td>4.8</td>
       </tr>
       
     </tbody>
@@ -113,7 +113,7 @@
      covered at
      <span class="covered_strength">
        <span class="green">
-         3.43
+         5.34
        </span>
     </span> hits/line)
   </h2>
@@ -155,7 +155,7 @@
         <td>43</td>
         <td>43</td>
         <td>0</td>
-        <td>3.5</td>
+        <td>5.5</td>
       </tr>
       
     </tbody>
@@ -170,7 +170,7 @@
      covered at
      <span class="covered_strength">
        <span class="green">
-         3.2
+         4.8
        </span>
     </span> hits/line)
   </h2>
@@ -202,7 +202,7 @@
         <td>5</td>
         <td>5</td>
         <td>0</td>
-        <td>3.2</td>
+        <td>4.8</td>
       </tr>
       
     </tbody>
@@ -517,14 +517,14 @@
           <code class="ruby">  def index</code>
         </li>
       
-        <li class="covered" data-hits="9" data-linenumber="14">
-          <span class="hits">9</span>
+        <li class="covered" data-hits="17" data-linenumber="14">
+          <span class="hits">17</span>
           
           <code class="ruby">    sort = params[:sort] || session[:sort]</code>
         </li>
       
-        <li class="covered" data-hits="9" data-linenumber="15">
-          <span class="hits">9</span>
+        <li class="covered" data-hits="17" data-linenumber="15">
+          <span class="hits">17</span>
           
           <code class="ruby">    case sort</code>
         </li>
@@ -535,8 +535,8 @@
           <code class="ruby">    when &#39;title&#39;</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="17">
-          <span class="hits">1</span>
+        <li class="covered" data-hits="3" data-linenumber="17">
+          <span class="hits">3</span>
           
           <code class="ruby">      ordering,@title_header = {:title =&gt; :asc}, &#39;hilite&#39;</code>
         </li>
@@ -547,8 +547,8 @@
           <code class="ruby">    when &#39;release_date&#39;</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="19">
-          <span class="hits">1</span>
+        <li class="covered" data-hits="3" data-linenumber="19">
+          <span class="hits">3</span>
           
           <code class="ruby">      ordering,@date_header = {:release_date =&gt; :asc}, &#39;hilite&#39;</code>
         </li>
@@ -559,14 +559,14 @@
           <code class="ruby">    end</code>
         </li>
       
-        <li class="covered" data-hits="9" data-linenumber="21">
-          <span class="hits">9</span>
+        <li class="covered" data-hits="17" data-linenumber="21">
+          <span class="hits">17</span>
           
           <code class="ruby">    @all_ratings = Movie.all_ratings</code>
         </li>
       
-        <li class="covered" data-hits="9" data-linenumber="22">
-          <span class="hits">9</span>
+        <li class="covered" data-hits="17" data-linenumber="22">
+          <span class="hits">17</span>
           
           <code class="ruby">    @selected_ratings = params[:ratings] || session[:ratings] || {}</code>
         </li>
@@ -577,14 +577,14 @@
           <code class="ruby">    </code>
         </li>
       
-        <li class="covered" data-hits="9" data-linenumber="24">
-          <span class="hits">9</span>
+        <li class="covered" data-hits="17" data-linenumber="24">
+          <span class="hits">17</span>
           
           <code class="ruby">    if @selected_ratings == {}</code>
         </li>
       
-        <li class="covered" data-hits="30" data-linenumber="25">
-          <span class="hits">30</span>
+        <li class="covered" data-hits="54" data-linenumber="25">
+          <span class="hits">54</span>
           
           <code class="ruby">      @selected_ratings = Hash[@all_ratings.map {|rating| [rating, rating]}]</code>
         </li>
@@ -601,26 +601,26 @@
           <code class="ruby">    </code>
         </li>
       
-        <li class="covered" data-hits="9" data-linenumber="28">
-          <span class="hits">9</span>
+        <li class="covered" data-hits="17" data-linenumber="28">
+          <span class="hits">17</span>
           
           <code class="ruby">    if params[:sort] != session[:sort] or params[:ratings] != session[:ratings]</code>
         </li>
       
-        <li class="covered" data-hits="4" data-linenumber="29">
-          <span class="hits">4</span>
+        <li class="covered" data-hits="6" data-linenumber="29">
+          <span class="hits">6</span>
           
           <code class="ruby">      session[:sort] = sort</code>
         </li>
       
-        <li class="covered" data-hits="4" data-linenumber="30">
-          <span class="hits">4</span>
+        <li class="covered" data-hits="6" data-linenumber="30">
+          <span class="hits">6</span>
           
           <code class="ruby">      session[:ratings] = @selected_ratings</code>
         </li>
       
-        <li class="covered" data-hits="4" data-linenumber="31">
-          <span class="hits">4</span>
+        <li class="covered" data-hits="6" data-linenumber="31">
+          <span class="hits">6</span>
           
           <code class="ruby">      redirect_to :sort =&gt; sort, :ratings =&gt; @selected_ratings and return</code>
         </li>
@@ -631,8 +631,8 @@
           <code class="ruby">    end</code>
         </li>
       
-        <li class="covered" data-hits="5" data-linenumber="33">
-          <span class="hits">5</span>
+        <li class="covered" data-hits="11" data-linenumber="33">
+          <span class="hits">11</span>
           
           <code class="ruby">    @movies = Movie.where(rating: @selected_ratings.keys).order(ordering)</code>
         </li>
@@ -1000,8 +1000,8 @@
           <code class="ruby">  def self.all_ratings</code>
         </li>
       
-        <li class="covered" data-hits="9" data-linenumber="3">
-          <span class="hits">9</span>
+        <li class="covered" data-hits="17" data-linenumber="3">
+          <span class="hits">17</span>
           
           <code class="ruby">    %w(G PG PG-13 NC-17 R)</code>
         </li>

@@ -4,7 +4,7 @@ Feature: display list of movies filtered by rating
   So that I can filter movies appropriate for my family
   I want to see list of movies matching only certain ratings
 
-Background: movies have been added to database
+Background: movies in database
 
   Given the following movies exist:
   | title        | rating | director     | release_date |
