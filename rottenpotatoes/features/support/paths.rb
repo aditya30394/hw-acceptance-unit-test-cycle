@@ -24,7 +24,10 @@ module NavigationHelpers
       else
         same_director_path(Movie.find_by_title($2).id)
       end  
-          
+    
+    when /^the (RottenPotatoes )?home\s?page$/
+      '/movies'
+      
     # Add more mappings here.
     # Here is an example that pulls values out of the Regexp:
     #

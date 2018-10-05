@@ -14,5 +14,6 @@ describe 'MoviesHelper' do
 
     it "check oddness function" do
       expect(@dummy_class.oddness(2)).to eq "even"
+      expect(@dummy_class.oddness(3)).to eq "odd"
     end
 end
